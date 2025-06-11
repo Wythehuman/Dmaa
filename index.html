@@ -1,0 +1,418 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Xbusiness and The Inspriation Co.ltd">
+    <meta name="description" content="Dept of Marine Administration Online Service (DMAOS) is a simple online gateway where any seafarer, any organization, any company or institution can access information in terms of departure and visa processing, medical fitness verification, seafarer license verfication and certificate validation. By providing access to related information, it supports all parties in related business functions through its service network.">
+    <meta name="keywords" content="DMA, Myanmar SRPS Companies, Department of Marine Administration Myanmar, DMA SRPS Administration, Myanmar Seafarer, Seafarer Myanmar, Myanmar Seafarer Administration, Seafarer Administration">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    
+    <title>DMAOS (SD) - Self Verification</title>
+    
+    <link href="css/css.css" rel="stylesheet">
+
+
+
+    <link href="css/css_1.css" rel="stylesheet">
+
+    <link href="css/css_2.css" rel="stylesheet">
+
+    
+    <!-- The DevExpress ASP.NET MVC Extensions' scripts -->
+
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><b>Dept. of Marine Administration, Myanmar</b></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/News/Index">News</a></li>
+                    <li><a href="/Help/Index">Help</a></li>
+                </ul>
+
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div style="margin-top: 51px;">
+        
+
+    <div style="background-color: #f7f7f7; padding: 20px 0;">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <table width="100%">
+                        <tbody><tr>
+                            <td width="60px;"><a href="/Home/Index" class="btn btn-default"><span class="glyphicon glyphicon-circle-arrow-left"></span></a> </td>
+                            <td><span class="fontSize3">All-In-One Certificate Verification</span></td>
+                            <td width="55%" style="text-align:right;"><span class="fontSize3">Self Verification</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    </div>
+    
+    <div class="container-fluid">
+        
+            <div class="col-md-12">
+               
+                
+
+<div style="clear:both"></div>
+<div class="divider3"></div>
+<div class="container">
+    <div class="row pa10">
+        <div class="col-md-6">
+            <!-- features #1 -->
+            <div class="table-layout">
+
+                <div class="col-xs-2 valign-top">
+                    <img src="images/pagequality.png" width="100%">
+                </div>
+                <div class="col-xs-10 valign-top pl15">
+                    <h4 class="font-alt mt0">Instant verification</h4>
+                    <p>
+                        Now we provide instant verification service for all-in-one certificate information. Your verification result will be appeared below on the page. You can refer this page for your requesting company or institution. <span class="text-danger">We inform that we are not going to send verification result to your email instantly and if you need email verification result, you can use COC/COP verification scheme or contact <a href="mailto:certificate@dma.gov.mm">certificate@dma.gov.mm</a></span>
+                    </p>
+                </div>
+            </div>
+            <!-- features #1 -->
+            <div class="visible-md visible-lg" style="margin-bottom:50px;"></div><!-- spacer -->
+            <!-- features #2 -->
+            <div class="table-layout">
+                <div class="col-xs-2 valign-top">
+                    <img src="images/proofreading.png" width="100%">
+                </div>
+                <div class="col-xs-10 valign-top pl15">
+                    <h4 class="font-alt mt0">Verification through QR code for Authenticity</h4>
+                    <p>
+                        You can get verification result of particular seafarer by scanning QR code shown in profile page of All-in-one certificate booklet.
+                    </p>
+                    <a href="/AllInOneCertificate/QRVerification" target="_blank" class="btn btn-info btn-sm"> See instruction now</a>
+                </div>
+            </div>
+            <br>
+            <div class="alert alert-success" id="successresponse" style="display:none;">
+                <h5 class="font-alt mt0">Successful! Verification result was sent.</h5>
+                <p>
+                    Please check your email you entered for receiving verification result.
+                </p>
+            </div>
+           
+        </div>
+
+        <div class="col-md-6">
+            <!-- Register form -->
+<form action="/AllInOneCertificate/Verify" class="panel nm" id="AllInOneForm" method="post">                <div class="panel-body">
+                    <div class="form-group">
+                        <label>CDC No</label>
+                        <input class="form-control" data-val="true" data-val-number="The field CrewCDCNo must be a number." data-val-required="The CrewCDCNo field is required." id="CrewCDCNo" name="CrewCDCNo" placeholder="Crew CDC No" type="text" value="">
+                        
+                    </div>
+                    <div class="form-group">
+                        <label>Certificate No.</label>
+                        <input class="form-control" id="Serial" name="Serial" placeholder="Certificate Serial No." type="text" value="">
+                        
+                    </div>
+                    <div class="form-group">
+                        <label>Passport No</label>
+                        <input class="form-control" id="CrewPassport" name="CrewPassport" placeholder="Latest Crew Passport No" type="text" value="">
+               
+                    </div>
+                    
+                </div>
+                <hr class="nm">
+                <div class="panel-body">
+                    <p class="semibold text-muted">You need to fill your email address for asking verification request. The system will not response directly to your email. We will keep it for tracking purpose only.</p>
+                    <div class="form-group">
+                        <label>Requester's Email</label>
+                        <input class="form-control" id="ReplyEmail" name="ReplyEmail" placeholder="Type requester's email here" type="email" value="">
+                        
+                    </div>
+
+                </div>
+                <div class="panel-footer">
+                    <button type="submit" class="btn btn-block btn-success ladda-button" data-style="expand-right"><span class="glyphicon glyphicon-circle-arrow-right"></span> <span class="ladda-label"> Verify now</span></button>
+                </div>
+<input id="hdnIPAddress" name="IPAddress" type="hidden" value=""><input data-val="true" data-val-number="The field Latitude must be a number." id="hdnLatitude" name="Latitude" type="hidden" value=""><input data-val="true" data-val-number="The field Longitude must be a number." id="hdnLongitude" name="Longitude" type="hidden" value=""><input id="hdnCountry" name="Country" type="hidden" value=""><input id="hdnCity" name="City" type="hidden" value=""></form>            <!-- Register form -->
+        </div>
+        
+    </div>
+    <div class="row pa10" id="error" style="display:none;">
+        <div class="col-md-12">
+            <div class="tab-content">
+                <!-- tab-pane: profile -->
+                <div class="tab-pane active" id="profile">
+                    <!-- form profile -->
+                    <form class="panel form-horizontal form-bordered" name="form-profile">
+                        <div class="panel-body pt0 pb0">
+                            <div class="form-group header bgcolor-default">
+                                <div class="col-md-12 text-center pt10">
+                                    <img class="img-circle img-bordered-primary" src="images/logo.jpg" style="width:120px;margin:auto;"><br><br>
+                                    <h4 class="semibold text-success mt0 mb5 text-danger"><span class="ico-cancel"></span> Sorry, verification failed!</h4>
+                                    <p class="text-default nm">See the following information for taking further action.</p>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <br>
+                                <div class="row text-center">
+                                    <div class="col-sm-12" align="center">
+                                        <img src="images/question.png" style="width:90px; height:90px;margin:auto">
+                                   
+                                     <h3 class="text-danger"><strong>Warning Notice!</strong></h3>
+                                     <p class="fontSize3"><strong>If you have found any error or discrepancies on verification result or suspicious fraud or forgery we recommend you to email to  <br><a href="mailto:certificate@dma.gov.mm">certificate@dma.gov.mm</a> for seeking further clarification and more information.</strong></p>
+                                    </div>
+                                </div>
+                                <hr>
+                                
+                            </div>
+
+
+                        </div>
+                        
+                    </form>
+                    <!--/ form profile -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row pa10" id="result">
+      
+    </div>
+</div>
+
+
+            </div>
+            <div class="col-md-12" id="EditForm"></div>
+            
+        
+    </div>
+    
+        <footer id="footer" role="contentinfo" style="background-color: #f7f7f7; padding: 30px 0 0px 0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4 class="mt0">About Department of Marine Adminstration</h4>
+                        <p>Department of Marine Administration is one of the Departments of Ministry of Transport in Myanmar.  The present day Department of Marine Administration was founded since the war days in 1930 and called Principal Port Officer. </p>
+                        <p>
+                            This is the officially presentative site for accessing any information related with Myanmar seafarer registration, verification and seaferer related information services.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="mt0">Address</h4>
+                        <address>
+                            <strong>Department of Marine Administration</strong><br>
+                            Dawbon Dockyard<br>
+                            Dawbon Township, Yangon<br>
+                           
+                            <abbr title="Email">Email:</abbr> <a href="mailto:certificate@dma.gov.mm">certificate@dma.gov.mm</a>
+                        </address>
+                    </div>
+                </div>
+
+            </div>
+            <div style="background-color: #000000; padding: 15px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="nm text-muted">© Copyright 2016 by <a href="javascript:void(0);" class="text-white">Department of Marine Administration</a>. <a href="https://yammobots.com" class="text-white">Developed by Yammobots Co.,Ltd</a> All Rights Reserved.</p>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <a href="javascript:void(0);" class="text-white">Privacy Policy</a>
+                            <span class="ml5 mr5">•</span>
+                            <a href="javascript:void(0);" class="text-white">Terms of Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+   
+    <script async="" src="js/analytics.js"></script><script src="js/DmaSD.js"></script>
+
+    <script src="js/Template.js"></script>
+
+    
+<script src="js/validation.js"></script>
+
+
+    <script type="text/javascript">
+
+        $(function () {
+            var l = Ladda.create(document.querySelector('.btn.ladda-button'));
+            //$('#datetimepicker').datetimepicker({
+            //    //autoclose: true,
+            //    //format: 'mm/dd/yyyy'
+            //    pick12HourFormat: false,
+            //    pickTime: false
+              
+            //});
+            $('#AllInOneForm').bootstrapValidator({
+                message: 'This value is not valid',
+                feedbackIcons: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    CrewCDCNo: {
+                        message: 'Seafarer name is not valid.',
+                        validators: {
+                            notEmpty: {
+                                message: 'Seafarer name is required and cannot be empty.'
+                            }
+
+                        }
+                    },
+                    CrewPassport: {
+                        message: 'Passport No is not valid.',
+                        validators: {
+                            notEmpty: {
+                                message: 'Passport No is required and cannot be empty.'
+                            }
+
+                        }
+                    },
+                    //CrewDOB: {
+                    //    message: 'Date Of Birth is not valid.',
+                    //    validators: {
+                    //        notEmpty: {
+                    //            message: 'Date Of Birth is required and cannot be empty.'
+                    //        },
+                    //        date: {
+                    //            format: 'MM/DD/YYYY',
+                    //            message: 'The date is not a valid'
+                            
+                    //        }
+                    //    }                       
+        
+                    //},
+                    Serial: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Cdcno is required and cannot be empty.'
+                            }
+
+                        }
+                    },
+                    ReplyEmail: {
+                        message: 'Email is not valid.',
+                        validators: {
+                            notEmpty: {
+                                message: 'Your email is required and cannot be empty.'
+                            },
+                            emailAddress: {
+                                message: 'Entered value is not a valid email address'
+                            }
+                        }
+                    }
+                }
+            }).on('success.form.bv', function (e) {
+                e.preventDefault();
+                l.start();
+                var $form = $(e.target);
+
+               
+                $.get('http://jsonip.com/', function (r) {
+                    $('#hdnIPAddress').val(r.ip);
+                    
+                    $.getJSON('https://ipapi.co/' + r.ip + '/json', function (data) {
+                        $('#hdnCountry').val(data.country);
+                        $('#hdnCity').val(data.city);
+                        $('#hdnLongitude').val(data.longitude);
+                        $('#hdnLatitude').val(data.latitude);
+                    });
+
+                });
+                        
+                $.ajax({
+                    type: "POST",
+                    url: $form.attr('action'),
+                    data: $form.serialize(),
+                    cache: false,
+                    async: true,
+                    beforeSend: function()
+                    {
+                        $('#result').empty();
+                        $('#successresponse').css('display', 'none');
+                        $('#error').css('display', 'none');
+                    },
+                    success: function (data) {
+                       
+                        if (data == "VerificationError") {
+                            $('#error').css('display', 'block');
+                        }
+                        else {
+                            $('#result').empty().append(data);
+                        }
+
+                        l.stop();
+                    },
+                    error: function (e) {
+                        l.stop();
+                    }
+                });
+               
+            });
+       
+        });
+        
+        
+
+
+
+    </script>
+
+
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-68930926-1', 'auto');
+        ga('send', 'pageview');
+   
+       
+    function EditProfile(agencyId) {
+       
+        $.ajax(
+       {
+           url: '/Account/Edit',
+           data: { agencyId: agencyId },
+           beforeSend: function () {
+
+           },
+           success: function (data) {
+               $('#EditForm').empty().html(data);
+           },
+           complete: function () {
+               $('#ModalEditProfile').modal('show');
+           }
+       })
+    }
+    </script>
+
+
+</body></html>
